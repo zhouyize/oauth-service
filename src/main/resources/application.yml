@@ -1,0 +1,59 @@
+server:
+  port: 6688
+  contextPath: /
+  
+spring:
+  http:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    
+  jpa: 
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties: 
+      hibernate: 
+        current_session_class: org.springframework.orm.hibernate4.SpringSessionContext
+        dialect: org.hibernate.dialect.MySQL5Dialect   
+
+#  cloud: 
+#    stream:
+#      bindings:
+#        input:
+#          destination: BerryEventTopic
+#          content-type: application/json
+#          group: berry
+#        output:
+#          destination: BerryEventTopic
+#          content-type: application/json
+#      kafka:
+#        binder:
+#          zkNodes: 127.0.0.1
+#          brokers: 127.0.0.1
+          
+pager: 
+  defaultSize: 10
+  
+event:
+  enable: true
+
+security:
+  basic:
+    enabled: true
+    path: /swagger-ui.html
+  user:
+    name: admin
+    password: admin
+#berry:
+#  max_import_thesis_rows: 100
+#  max_payment_days: 1
+#  min_process_days: 2
+#  unit_price:
+#    WESTNORTH: 250
+#    OTHER: 300
