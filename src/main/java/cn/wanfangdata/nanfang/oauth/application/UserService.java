@@ -14,7 +14,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
 import org.springframework.stereotype.Service;
-import cn.wanfangdata.nanfang.oauth.domain.SysCollege;
 import cn.wanfangdata.nanfang.oauth.domain.User;
 import cn.wanfangdata.nanfang.oauth.domain.spec.UserSpecifications;
 import cn.wanfangdata.nanfang.oauth.repo.CollegeRepository;
